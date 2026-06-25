@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from app.api.v1.endpoints import lawyers, admin, auth ,locations
+from app.api.v1.endpoints import lawyers, admin, auth
 
 router = APIRouter()
 
@@ -11,5 +11,3 @@ router.include_router(auth.router, tags=["Authentication"])
 
 # مسیرهای ادمین (همانطور که بود)
 router.include_router(admin.router, prefix="/admin", tags=["Admin lawyers"])
-
-router.include_router(locations.router, prefix="/admin/locations", tags=["Admin locations"])
