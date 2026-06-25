@@ -10,6 +10,7 @@ class LawyerBase(BaseModel):
     experience_years: Optional[int] = 0
     # تغییر: از city (رشته) به city_id (عدد) تغییر دادیم
     city_id: Optional[int] = None
+    about_me : Optional[str] = None
 
 class LawyerCreate(LawyerBase):
     pass
@@ -23,6 +24,7 @@ class LawyerUpdate(BaseModel):
     # تغییر: اینجا هم city_id اضافه شد تا بتوانیم شهر را عوض کنیم
     city_id: Optional[int] = None
     is_active: Optional[bool] = None
+    about_me : Optional[str] = None
 
 class LawyerResponse(LawyerBase):
     id: int
